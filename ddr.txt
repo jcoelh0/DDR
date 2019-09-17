@@ -1,0 +1,78 @@
+x = linspace(0.1,0.97,200);
+f= (1-x).^3;
+plot(x,f)
+
+xlabel('x')
+ylabel('f(x)')
+
+
+x = linspace(0.1,0.97,200);
+f= (1-x).^3;
+g= (1-x).^5;
+plot(x,f,'x--',x,g,'b')
+legend('f(x)','g(x)','location','southwest')
+xlabel('x')
+ylabel('f(x)')
+grid on
+title('My plot')
+
+
+
+x= linspace(0,100,10)
+
+plot(x,f)
+legend('n=3','n=4','n=5')
+ylabel('p(%)')
+grid on
+title('Probability of right answer (%)')
+
+
+
+
+f(i)=nchoosek(n,i)*p^i*(1-p)^(n-i)
+
+
+2a. (i=0)
+
+n= 800
+p= 10^-2
+f=(1-p)^n
+
+
+
+2b.
+n= 8000
+p= 10^-3
+f=nchoosek(n,1)*p*(1-p)^(n-1)
+
+
+2c.
+n= 1600
+p= 10^-4
+f=1-((1-p)^n)
+
+
+2d.
+
+x= linspace(0,100,10)
+
+plot(x,f)
+legend('100 Bytes','200 Bytes','1000 Bytes')
+ylabel('Bit Error Rate')
+grid on
+title('Probability of right answer (%)')
+
+
+
+
+
+3-b dia 18/3
+
+figure(1)
+bar(w,avav60)
+hold on
+bar(w,avav120)
+%axis([0 T 0 110])
+xlabel('Radio range (W)');
+ylabel('Average Availability (y/100)')
+title('Average Availability with nAPs=4 N=60')
